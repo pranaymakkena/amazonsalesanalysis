@@ -1,134 +1,165 @@
-/* Import Poppins font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #f0f4f8;
-    color: #333;
-    line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
 }
 
 header {
-    background: linear-gradient(to right, #4e54c8, #8f94fb);
-    color: white;
-    padding: 2rem 1rem;
-    text-align: center;
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
 header p {
-    font-size: 1.1rem;
-    opacity: 0.9;
+  font-size: 1.1rem;
+  opacity: 0.9;
 }
 
 section {
-    padding: 2rem 1rem;
-    max-width: 1200px;
-    margin: auto;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
 h2 {
-    color: #4e54c8;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    text-align: center;
+  color: #4e54c8;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .dashboard-images {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
 }
 
 .card {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    padding: 1rem;
-    max-width: 500px;
-    width: 100%;
-    transition: transform 0.3s ease;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 1rem;
+  max-width: 500px;
+  width: 100%;
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-4px);
+  transform: translateY(-4px);
 }
 
 .card h3 {
-    color: #ff6b6b;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    text-align: center;
+  color: #ff6b6b;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
 }
 
 .download-section ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .download-section li {
-    background: white;
-    margin: 0.75rem 0;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    transition: background 0.3s;
+  background: white;
+  margin: 0.75rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.3s;
 }
 
 .download-section li:hover {
-    background: #f2f6ff;
+  background: #f2f6ff;
 }
 
 .download-section a {
-    text-decoration: none;
-    color: #4e54c8;
-    font-weight: 600;
-    font-size: 1rem;
+  text-decoration: none;
+  color: #4e54c8;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 footer {
-    text-align: center;
-    padding: 1rem;
-    background: #e0e7ff;
-    font-size: 0.95rem;
-    margin-top: 3rem;
-    color: #333;
+  text-align: center;
+  padding: 1rem;
+  background: #e0e7ff;
+  font-size: 0.95rem;
+  margin-top: 3rem;
+  color: #333;
 }
 
-/* Responsive styles */
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  display: block;
+  margin: 5% auto;
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Responsive */
 @media screen and (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
+  header h1 {
+    font-size: 2rem;
+  }
 
-    .dashboard-images {
-        flex-direction: column;
-        align-items: center;
-    }
+  .dashboard-images {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .card {
-        max-width: 90%;
-    }
+  .card {
+    max-width: 90%;
+  }
 
-    h2 {
-        font-size: 1.5rem;
-    }
+  h2 {
+    font-size: 1.5rem;
+  }
 }
