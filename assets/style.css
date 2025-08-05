@@ -1,0 +1,66 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background: #4a90e2;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+section {
+    padding: 2rem;
+}
+
+.dashboard-images {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 1rem;
+    max-width: 400px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.download-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.download-section li {
+    background: white;
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.download-section a {
+    text-decoration: none;
+    color: #4a90e2;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #eee;
+    margin-top: 2rem;
+}
